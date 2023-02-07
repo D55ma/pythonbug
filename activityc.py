@@ -1,6 +1,8 @@
-l = [1, 2, 3, 4]
-# iterates over three elements in the list
-if 3 in l:
-    print("The number 3 is in the list.")
-else:
-    print("The number 3 is NOT in the list.")
+def append(number, number_list=[]):
+    number_list.append(number)
+    print(number_list)
+    return number_list
+
+append(5) # expecting: [5], actual: [5]
+append(7) # expecting: [7], actual: [5, 7]
+append(2) # expecting: [2], actual: [5, 7, 2]
